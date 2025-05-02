@@ -1,0 +1,109 @@
+/* Basic Layout Structure */
+.appContainer {
+  display: grid;
+  grid-template-columns: 250px 1fr; /* Sidebar and Main Content */
+  grid-template-rows: auto 1fr auto; /* Header, Content Area, Footer */
+  grid-template-areas:
+  "header header"
+  "sidebar main"
+  "footer footer";
+  min-height: 100vh;
+  font-family: sans-serif;
+  }
+  .header {
+  grid-area: header;
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  }
+  .sidebar {
+  grid-area: sidebar;
+  background-color: #f4f4f4;
+  padding: 1rem;
+  border-right: 1px solid #ddd;
+  }
+  .mainContent {
+  grid-area: main;
+  padding: 1.5rem;
+  overflow-y: auto; /* Allow scrolling if content overflows */
+  }
+  .footer {
+  text-align: center;
+  grid-area: footer;
+  background-color: #333;
+  color: white;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  }
+
+  .footerp{
+    text-align: center;
+    grid-area: footer;
+    font-size: 2.8rem;
+    }
+  
+
+  /* Grid for Charts */
+  .chartGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Responsive
+  grid */
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  }
+  /* Info Box in Sidebar */
+  .infoBox {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #e9e9e9;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  }
+  .infoBox h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  }
+  .infoBox p {
+  line-height: 1.4;
+  }
+
+  .infoText {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 1rem;
+    color: blue;
+  }
+
+  /* Loading/Error Messages */
+  .message {
+  padding: 2rem;
+  text-align: center;
+  font-size: 1.2rem;
+  }
+  .error {
+  color: red;
+  font-weight: bold;
+  }
+  /* Basic Responsive Adjustment */
+  @media (max-width: 768px) {
+  .appContainer {
+  grid-template-columns: 1fr; /* Stack sidebar and main content */
+  grid-template-rows: auto auto 1fr auto; /* Header, Sidebar, Content, Footer
+  */
+  grid-template-areas:
+  "header"
+  "sidebar"
+  "main"
+  "footer";
+  }
+  .sidebar {
+  border-right: none;
+  border-bottom: 1px solid #ddd;
+  }
+  .chartGrid {
+  grid-template-columns: 1fr; /* Stack charts on small screens */
+  }
+  }
+  /* Add styles for DataTable, FilterPanel, ChartCard in their
+  respective .module.css files */

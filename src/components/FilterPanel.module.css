@@ -1,0 +1,66 @@
+/* FilterPanel.css */
+
+/* Styles for the main filter panel container */
+.filterPanel {
+    background-color: #fff; /* White background */
+    border: 1px solid #ddd; /* Light grey border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Internal padding */
+    margin-bottom: 20px; /* Space below the panel */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    flex-shrink: 0; /* Prevent panel from shrinking in a flex container */
+    /* Optional: Define a width if used in a sidebar layout */
+    /* width: 250px; */
+  }
+  
+  /* Styles for the filter panel title */
+  .filterPanel h3 {
+    margin-top: 0; /* Remove default top margin */
+    margin-bottom: 15px; /* Space below the title */
+    color: #333; /* Darker color for the title */
+    font-size: 1.3em; /* Font size for the title */
+    border-bottom: 1px solid #eee; /* Separator line */
+    padding-bottom: 10px; /* Space below the title and separator */
+  }
+  
+  /* Styles for individual filter groups (e.g., category, date range) */
+  .filterGroup {
+    margin-bottom: 15px; /* Space between filter groups */
+  }
+  
+  /* Styles for labels within filter groups */
+  .filterGroup label {
+    display: block; /* Make labels block elements for better spacing */
+    margin-bottom: 8px; /* Space between label and input */
+    font-weight: bold; /* Bold text for labels */
+    color: #555; /* Slightly lighter color for labels */
+  }
+  
+  /* Styles for select inputs */
+  .selectInput {
+    width: 100%; /* Make select input take the full width of its container */
+    padding: 10px; /* Internal padding */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 1em; /* Font size */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    /* Optional: Add custom arrow styling if needed, requires more advanced CSS */
+  }
+  
+  /* Styles for date inputs (example, uncomment if used) */
+  /*
+  .filterGroup input[type="date"] {
+    width: calc(50% - 10px); // Example: Two date inputs side-by-side
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box;
+    margin-right: 5px; // Space between date inputs
+    display: inline-block; // Allow inputs to be on the same line
+  }
+  
+  .filterGroup input[type="date"]:last-child {
+    margin-right: 0; // No margin on the last input
+  }
+  */

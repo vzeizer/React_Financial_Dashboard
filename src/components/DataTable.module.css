@@ -1,0 +1,53 @@
+/* DataTable.css */
+
+/* Container for the table to manage overflow and spacing */
+.tableContainer {
+    width: 100%;
+    overflow-x: auto; /* Add horizontal scroll if table is too wide */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd; /* Optional: Add a border around the container */
+    border-radius: 4px; /* Optional: Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+  }
+  
+  /* Styles for the main table element */
+  .dataTable {
+    width: 100%; /* Make the table take the full width of its container */
+    border-collapse: collapse; /* Collapse borders between cells */
+    min-width: 600px; /* Ensure a minimum width to prevent excessive squishing */
+  }
+  
+  /* Styles for table header cells */
+  .dataTable th {
+    background-color: #f2f2f2; /* Light grey background for headers */
+    color: #333; /* Darker text color for headers */
+    font-weight: bold;
+    padding: 12px 15px; /* Padding inside header cells */
+    text-align: left; /* Align header text to the left */
+    border-bottom: 1px solid #ddd; /* Border at the bottom of headers */
+  }
+  
+  /* Styles for table data cells */
+  .dataTable td {
+    padding: 10px 15px; /* Padding inside data cells */
+    border-bottom: 1px solid #ddd; /* Border at the bottom of data cells */
+    text-align: left; /* Align data text to the left */
+  }
+  
+  /* Optional: Zebra striping for table rows for better readability */
+  .dataTable tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Slightly different background for even rows */
+  }
+  
+  /* Optional: Hover effect on rows */
+  .dataTable tbody tr:hover {
+    background-color: #e9e9e9; /* Highlight row on hover */
+  }
+  
+  /* Style for the "No data" message */
+  .tableContainer + p {
+    text-align: center;
+    color: #777;
+    margin-top: 20px;
+  }

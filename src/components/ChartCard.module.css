@@ -1,0 +1,44 @@
+/* ChartCard.css */
+
+/* Styles for the main card container */
+.chartCard {
+    background-color: #fff; /* White background */
+    border: 1px solid #ddd; /* Light grey border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Internal padding */
+    margin-bottom: 20px; /* Space below each card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack title and chart container vertically */
+    height: 100%; /* Make sure cards in a grid have equal height */
+  }
+  
+  /* Styles for the chart title */
+  .chartCard h4 {
+    margin-top: 0; /* Remove default top margin */
+    margin-bottom: 15px; /* Space below the title */
+    color: #333; /* Darker color for the title */
+    font-size: 1.2em; /* Slightly larger font size */
+    border-bottom: 1px solid #eee; /* Optional: Separator line below title */
+    padding-bottom: 10px; /* Space between title and separator */
+  }
+  
+  /* Styles for the container holding the actual chart */
+  .chartContainer {
+    flex-grow: 1; /* Allow the chart container to take up available space */
+    /* Add specific dimensions or min/max heights if needed for charts */
+    position: relative; /* Needed if chart library uses absolute positioning */
+    /* Example for react-chartjs-2 to be responsive within container */
+    /* height: 100%; */ /* This might be needed depending on the chart lib and its responsive options */
+    /* width: 100%; */
+  }
+  
+  /* Add any specific styles needed for the chart library you are using */
+  /* For example, if using react-chartjs-2 and you want responsive charts */
+  /* .chartContainer canvas {
+    max-width: 100%;
+    max-height: 100%;
+  } */
+  
+  /* If using Recharts and ResponsiveContainer */
+  /* The ResponsiveContainer handles dimensions, so often no extra styles needed here */
