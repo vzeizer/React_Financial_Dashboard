@@ -86,6 +86,9 @@ useEffect(() => {
   if (filters.month !== new Date().getMonth) {
     result = result.filter(item => new Date(item.date).getMonth() === filters.month);
     }
+  if (filters.year !== new Date().getFullYear) {
+    result = result.filter(item => new Date(item.date).getFullYear() === filters.year);
+    }
     // Add more filtering logic here (e.g., date range)
   setFilteredData(result);
   }, [filters, data]); // Re-run whenever filters or the original data change
@@ -147,9 +150,10 @@ useEffect(() => {
   // concatenate the two arrays
   const uniqueCategoriesAndMonths = useMemo(() => {
   const uniqueMonths = [new Date().getMonth(), ...new Set(data.map(item => new Date(item.date).getMonth()).filter(month => month !== new Date().getMonth()))];
+  const uniqueYears = [new Date().getFullYear(), ...new Set(data.map(item => new Date(item.date).getFullYear()).filter(year => year !== new Date().getFullYear()))];  
   console.log('Unique Months:', uniqueMonths); // Debugging line
   const uniqueCategories = ['All categories', ...new Set(data.map(item => item.category))];
-  return [[...uniqueCategories], [...uniqueMonths]];
+  return [[...uniqueCategories], [...uniqueMonths],[...uniqueYears]];
   }, [data]);
 
 

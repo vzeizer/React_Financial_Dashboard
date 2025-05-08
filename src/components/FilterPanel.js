@@ -12,6 +12,10 @@ function FilterPanel({ categories, currentFilters, onFilterChange }) {
         onFilterChange('month', parseInt(event.target.value));
     };
 
+    const HandleYearChange = (event) => {
+        onFilterChange('year', parseInt(event.target.value));
+    }
+
     const handleDateChange = (event) => {
         // Add handlers for other filters (e.g., date range) here
     };
@@ -46,6 +50,21 @@ function FilterPanel({ categories, currentFilters, onFilterChange }) {
                     {categories[1].map((cat) => (
                         <option key={cat} value={cat}>
                             {dict_month[cat] === new Date().getMonth() ? new Date().getMonth() : dict_month[cat]}
+                        </option>
+                    ))}
+                </select>
+            </div>
+            <div className={styles.filterGroup}>
+                <label htmlFor="year-select">Year:</label>
+                <select
+                    id="year-select"
+                    value={currentFilters.year}
+                    onChange={HandleYearChange}
+                    className={styles.selectInput}
+                >
+                    {categories[2].map((cat) => (
+                        <option key={cat} value={cat}>
+                            {cat === new Date().getFullYear() ? new Date().getFullYear() : cat}
                         </option>
                     ))}
                 </select>
