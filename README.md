@@ -1,4 +1,4 @@
-# Project Idea: Interactive Data Exploration & Visualization Dashboard
+# Portfolio Project: Interactive Data Exploration & Visualization Dashboard
 
 - This project aims to create a web application where you can showcase insights from a chosen dataset through interactive visualizations. It demonstrates your ability to process data, extract meaning, and present it effectively using web technologies.
 - Core Concept:
@@ -57,34 +57,44 @@ Steps to Build:
     11. Showcase: Add the link to the live project and its source code (on GitHub) to your main portfolio website or resume. 
 This project provides a strong balance, demonstrating your ability to handle data, extract insights, and build functional, user-friendly web applications – all valuable skills for a data scientist working in a modern team.
 
-## Demonstrating the Usage of the Financial Dashboard React App
+## Demonstrating the Usage of a Financial Dashboard React App
 
+This project demonstrates the use of React Hooks, such as **useEffect**, and **useMemo** in the context of a financial application displaying a dashboard by using *mocked* data (**sampleData.json**).
+Library [recharts](https://recharts.org/en-US) along with its pre-built components was used to build the general layout.
+
+The figure below shows the overall application view, showing that the visualizations can be filtered by *category*, *year*, and *month*. Visualizations showing the overall money spent by category are shown in a panel, as well as a time-series graphics showing the evolution of the selected categories.
 
 ![logo](public/images/1_dashboard_view1.png)
 
-
+The next figure, shown below, depicts a more general view of the application, displaying also the corresponding data of the filtered items in table format.
 
 ![logo](public/images/2_dashboard_view2.png)
 
-
+The next figure shows the money spent by **food category** along with the time evolution of such a spending.
 
 ![logo](public/images/3_filterfood.png)
 
+The next figure shows the money spent by **housing category** along with the time evolution of such a spending.
 
 
 ![logo](public/images/4_filterhousing.png)
 
+The next figure shows the money spent by **dog** along with the time evolution of such a spending.
 
 
 ![logo](public/images/5_filterdog.png)
 
+The next figure shows the money spent along the 2024 year (corresponding to a year filtering, as highlighted in the box) evolution of such a spending.
 
 
 ![logo](public/images/6_filteryear2024.png)
 
+The next figure shows the money spent along the 2024 year (corresponding to a year filtering, as highlighted in the box) evolution of such a spending, as well as the *mocked data* used to create this visualization.
 
 ![logo](public/images/7_filteryear2024_includingfiltereddata.png)
 
+
+The next figure shows the money spent along the 2024 year on June (corresponding to a year and month filtering, as highlighted in the box) evolution of such a spending, as well as the *mocked data* used to create this visualization.
 
 
 ![logo](public/images/8_filterJune2024.png)
